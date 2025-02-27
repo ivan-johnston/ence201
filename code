@@ -1,3 +1,10 @@
-import pandas
-bridgedata = pandas.read_csv('concrete-strength-data.csv')
+import pandas as pd
+import numpy as np
+#Question 1.1
+bridgedata = pd.read_csv('concrete-strength-data.csv')
 print(bridgedata)
+data = bridgedata.to_numpy()
+age = data[:,7]
+compstr = data[:,8]
+print(age)
+print(compstr)
