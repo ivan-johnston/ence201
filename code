@@ -1,0 +1,3 @@
+import pandas
+bridgedata = pandas.read_csv('concrete-strength-data.csv')
+print(bridgedata)
