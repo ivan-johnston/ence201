@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 #Question 1.1
 bridgedata = pd.read_csv('concrete-strength-data.csv')
 #Question 1.2
@@ -41,5 +42,17 @@ print('The range for Water is', waterrange)
 print('The range for Superplasticizer is', suplarange)
 print('The range for Coarse Aggregate is', coaggrange)
 print('The range for Fine Aggregate is', fiaggrange)
-print('The range for Age is', coagerange)
+print('The range for Age is', coagerange, 'days')
 print('The range for Concrete Compressive Strength is', cocmsrange)
+#Question 1.4
+cocmsmax = max(cocms)
+cocmsmin = min(cocms)
+cocmsavg = np.mean(cocms)
+print('The maximum concrete compressive strength is', cocmsmax,'MPa')
+print('The minimum concrete compressive strength is', cocmsmin)
+print('The average concrete compressive strength is', cocmsavg)
+#Question 1.5
+plt.scatter(coage, cocms, color='red', linestyle='--', linewidth=1)
+plt.show()
+#Question 1.6
+cutoffs = [0, 25, 50, 75, 100]
